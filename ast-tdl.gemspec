@@ -1,16 +1,14 @@
-# frozen_string_literal: true
-
 require_relative "lib/ast/fdl/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "ast-fdl"
+  spec.name          = "ast-tdl"
   spec.version       = Ast::Fdl::VERSION
   spec.authors       = ["firefly-cpp"]
   spec.email         = ["iztok@iztok-jr-fister.eu"]
 
-  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
+  spec.summary       = "An experimental and minimalistic Training Description Language for Artificial Sport Trainer"
   spec.description   = "TODO: Write a longer description or delete this line."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/firefly-cpp/AST-DSL"
   spec.required_ruby_version = ">= 2.4.0"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
