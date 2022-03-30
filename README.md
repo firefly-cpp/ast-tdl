@@ -1,35 +1,33 @@
-# Ast::Fdl
+# Training Description Language (TDL) for Artificial Sport Trainer (AST)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ast/fdl`. To experiment with that code, run `bin/console` for an interactive prompt.
+AST-DSL is a very small domain-specific language
 
-TODO: Delete this and the text above, and describe your gem
+## Objective
 
 ## Installation
 
-Add this line to your application's Gemfile:
+    $ gem install ast-tdl
+
+## Language description
+
+## Examples
+
+### Session
 
 ```ruby
-gem 'ast-fdl'
+session("Short swimming session today") {
+	sport :"swim"
+	info  :"Very easy training"
+    avhr  :"130"
+    td    :"30"
+}
 ```
+## License
 
-And then execute:
+This package is distributed under the MIT License. This license can be found online at <http://www.opensource.org/licenses/MIT>.
 
-    $ bundle install
+## Disclaimer
 
-Or install it yourself as:
+This framework is provided as-is, and there are no guarantees that it fits your purposes or that it is bug-free. Use it at your own risk!
 
-    $ gem install ast-fdl
 
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ast-fdl.
