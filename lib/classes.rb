@@ -1,8 +1,17 @@
+require 'json'
+
+
 class Sport
 	attr_reader :type
 
 	def initialize(type)
 		@type = type
+	end
+
+	def to_hash
+		sport_json = {
+			type: @type
+		}
 	end
 end
 
@@ -12,6 +21,12 @@ class Info
 	def initialize(message)
 		@message = message
 	end
+
+	def to_hash
+		info_json = {
+			message: @message
+		}
+	end
 end
 
 class Avhr
@@ -19,6 +34,12 @@ class Avhr
 
 	def initialize(heart_rate)
 		@heart_rate = heart_rate
+	end
+
+	def to_hash
+		info_json = {
+			average_hr: @heart_rate
+		}
 	end
 end
 
@@ -28,6 +49,12 @@ class Td
 	def initialize(duration)
 		@duration = duration
     end
+
+	def to_hash
+		td_json = {
+			duration: @duration
+		}
+	end
 end
 
 class AvhrRest
@@ -36,6 +63,12 @@ class AvhrRest
 	def initialize(avhr_rest)
 		@avhr_rest = avhr_rest
 	end
+
+	def to_hash
+		avhr_json = {
+			average_hr_rest: @avhr_rest
+		}
+	end
 end
 
 class TdRest
@@ -43,5 +76,11 @@ class TdRest
 
 	def initialize(td_rest)
 		@td_rest = td_rest
+	end
+
+	def to_hash
+		td_json = {
+			duration_rest: @td_rest
+		}
 	end
 end
