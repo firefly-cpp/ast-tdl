@@ -1,4 +1,4 @@
-require_relative '../lib/tdl'
+require_relative 'lib/tdl'
 
 
 EasyTraining = Ast.build :Monday do
@@ -24,7 +24,6 @@ EasyTraining = Ast.build :Monday do
         avhr_rest :"90"
         td_rest :"2"
     }
-    
 end
 
 puts EasyTraining
