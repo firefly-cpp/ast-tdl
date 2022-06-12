@@ -1,4 +1,4 @@
-require_relative 'lib/tdl'
+require_relative '../lib/tdl'
 
 
 EasyTraining = Ast.build :Monday do
