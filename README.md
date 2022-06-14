@@ -1,11 +1,11 @@
 # Training Description Language (TDL) for Artificial Sport Trainer (AST)
-AST-DSL is a very small domain-specific language, used for sport training description.
+ast-dsl is intended to be a small DSL for practical definition and description of sports training that can be automatically or manually defined and used in conjunction with Artificial Sport Trainer.
 
 ## Installation
     $ gem install ast-tdl
 
 ## Language description
-Training Description Language (TDL) is based on Ruby. It is intended to be used for describing sport trainings that consist of sessions and intervals. Those contain various data, such as duration, average heart rate, sport type and many more.
+Training Description Language (TDL) is implemented in Ruby. Currently, the description of sports training sessions and intervals is now supported. Those contain various data, such as duration, average heart rate, sport type, and many more.
 
 ## Examples
 ```ruby
@@ -22,7 +22,7 @@ EasyTraining = Ast.build :Monday do
 	info                :"Endurance ride with intervals"
 	average_heart_rate  :"140"
 	total_duration      :"250"
-    }    
+    }
 
     interval("Number 1") {
 	sport                   :"swim"
@@ -50,3 +50,7 @@ This package is distributed under the MIT License. This license can be found onl
 
 ## Disclaimer
 This framework is provided as-is, and there are no guarantees that it fits your purposes or that it is bug-free. Use it at your own risk!
+
+## References
+
+Fister Jr, I., Fister, I., Iglesias, A., Galvez, A., Deb, S., & Fister, D. (2021). On deploying the Artificial Sport Trainer into practice. arXiv preprint [arXiv:2109.13334](https://arxiv.org/abs/2109.13334).
