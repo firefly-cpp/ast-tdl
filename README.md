@@ -5,7 +5,7 @@ AST-DSL is a very small domain-specific language, used for sport training descri
     $ gem install ast-tdl
 
 ## Language description
-Training Description Language (TDL) is based on Ruby. It is intented to be used for describing sport trainings that consist of sessions and intervals. Those contain various data, such as duration, average heart rate, sport type and many more.
+Training Description Language (TDL) is based on Ruby. It is intended to be used for describing sport trainings that consist of sessions and intervals. Those contain various data, such as duration, average heart rate, sport type and many more.
 
 ## Examples
 ```ruby
