@@ -1,8 +1,8 @@
 Gem::Specification.new do |spec|
   spec.name          = "ast-tdl"
-  spec.version       = "0.0.1"
-  spec.authors       = ["firefly-cpp"]
-  spec.email         = ["iztok@iztok-jr-fister.eu"]
+  spec.version       = "0.0.2"
+  spec.authors       = ["firefly-cpp", "luckyLukac"]
+  spec.email         = ["iztok@iztok-jr-fister.eu", "luka.lukac@student.um.si"]
 
   spec.summary       = "An experimental and minimalistic Training Description Language for Artificial Sport Trainer"
   spec.homepage      = "https://github.com/firefly-cpp/AST-DSL"
@@ -21,5 +21,5 @@ Gem::Specification.new do |spec|
                 "lib/classes.rb",
                 "lib/interval.rb",
                 "lib/session.rb",
-                "lib/tdl.rb"]
+                "lib/ast-tdl.rb"]
 end

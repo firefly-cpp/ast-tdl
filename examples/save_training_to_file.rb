@@ -28,5 +28,5 @@ EasyTraining = Ast.build :Monday do
 end
 
 
-# Printing JSON-ized training to the console.
-puts EasyTraining.json
+# Saving JSON-ized training to a file.
+EasyTraining.save_to_file("training.json")
