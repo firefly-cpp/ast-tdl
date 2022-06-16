@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    ast-tdl (0.0.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (13.0.6)
+
+PLATFORMS
+  x64-mingw-ucrt
+
+DEPENDENCIES
+  ast-tdl!
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.3.7
