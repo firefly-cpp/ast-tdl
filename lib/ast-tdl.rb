@@ -1,1 +1,3 @@
-require_relative "./ast"
+# frozen_string_literal: true
+
+require_relative './ast'
