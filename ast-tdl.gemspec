@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.files = [
+    'LICENSE',
     'README.md',
     'lib/ast.rb',
     'lib/classes.rb',
