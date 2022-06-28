@@ -3,7 +3,7 @@
 require 'ast-tdl'
 
 # Training description in AST-TDL domain specific language.
-training = Ast.build :Monday do
+training = Ast.build(:Monday) do
   session('Short swimming session today') do
     sport               :swim
     info                :"Very easy training"
