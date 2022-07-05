@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
-require 'ast-tdl'
+# require 'ast-tdl'
+require_relative '../lib/ast-tdl'
 
 # Training description in AST-TDL domain specific language.
-training = Ast.build :Monday do
-  session('Short swimming session today') do
+training = Ast.build('My first training') do
+  session('Short swimming session') do
     sport               :swim
     info                :"Very easy training"
     average_heart_rate  :"130"
@@ -12,19 +13,20 @@ training = Ast.build :Monday do
   end
 
   session('Bike ride') do
-    sport               :bike
+    sport               :cycling
     info                :"Endurance ride with intervals"
     average_heart_rate  :"140"
-    total_duration      :"250"
+    total_duration      :"120"
   end
 
-  interval('Number 1') do
-    sport                   :swim
+  interval('Sample interval') do
+    sport                   :cycling
     info                    :Moderate
-    average_heart_rate      :"160"
-    total_duration          :"5"
-    average_heart_rate_rest :"90"
-    total_duration_rest     :"2"
+    speed_duration          :"5"
+    recovery_duration       :"5"
+    speed_heart_rate        :"180"
+    recovery_heart_rate     :"90"
+    repetitions             :"10"
   end
 end
 
