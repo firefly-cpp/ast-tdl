@@ -4,7 +4,7 @@
 ast-dsl is intended to be a small DSL for practical definition and description of sports training that can be automatically or manually defined and used in conjunction with Artificial Sport Trainer.
 
 ## Feature diagram
-![scheme](https://user-images.githubusercontent.com/73126820/175337865-77344476-b7c8-45d4-bda2-0aca82aebefd.png)
+![scheme](https://user-images.githubusercontent.com/73126820/177355094-0b115a33-896d-41b3-bc8b-f27b6632c2b1.png)
 
 ## Installation
     $ gem install ast-tdl
@@ -14,40 +14,54 @@ Training Description Language (TDL) is implemented in Ruby. Currently, the descr
 
 ## Examples
 ```ruby
-EasyTraining = Ast.build :Monday do
-    session("Short swimming session today") {
-	sport               :"swim"
-	info                :"Very easy training"
-        average_heart_rate  :"130"
-        total_duration      :"30"
-    }
+Ast.build('My first training') do
+  session('Short swimming session') do
+    sport               :swim
+    info                :"Very easy training"
+    average_heart_rate  :"130"
+    total_duration      :"30"
+  end
 
-    session("Bike ride") {
-        sport               :"bike"
-	info                :"Endurance ride with intervals"
-	average_heart_rate  :"140"
-	total_duration      :"250"
-    }
+  session('Bike ride') do
+    sport               :cycling
+    info                :"Endurance ride with intervals"
+    average_heart_rate  :"140"
+    total_duration      :"120"
+  end
 
-    interval("Number 1") {
-	sport                   :"swim"
-	info                    :"Moderate"
-        average_heart_rate      :"160"
-        total_duration          :"5"
-        average_heart_rate_rest :"90"
-        total_duration_rest     :"2"
-    }
+  interval('Sample interval') do
+    sport                   :cycling
+    info                    :Moderate
+    speed_duration          :"5"
+    recovery_duration       :"5"
+    speed_heart_rate        :"180"
+    recovery_heart_rate     :"90"
+    repetitions             :"10"
+  end
 end
 ```
 
 ### Session
 ```ruby
-session("Short swimming session today") {
-    sport 	        :"swim"
-    info                :"Very easy training"
-    average_heart_rate  :"130"
-    total_duration      :"30"
-}
+session('Bike ride') do
+  sport               :cycling
+  info                :"Endurance ride with intervals"
+  average_heart_rate  :"140"
+  total_duration      :"120"
+end
+```
+
+### Interval
+```ruby
+interval('Sample interval') do
+  sport                :cycling
+  info                 :Moderate
+  speed_duration       :"5"
+  recovery_duration    :"5"
+  speed_heart_rate     :"180"
+  recovery_heart_rate  :"90"
+  repetitions          :"10"
+end
 ```
 
 ## License
