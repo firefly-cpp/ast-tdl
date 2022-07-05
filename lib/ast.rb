@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'json'
-require_relative 'classes'
 require_relative 'interval'
 require_relative 'session'
 
@@ -69,7 +68,7 @@ module Ast
         session: @session.collect(&:to_hash),
         interval: @interval.collect(&:to_hash)
       }
-      training_json.to_json
+      JSON.pretty_generate(training_json)
     end
 
     ##

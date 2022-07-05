@@ -7,61 +7,63 @@ class Session
   # Initialization method for the +Session+ class.
   # Params:
   # +name+:: the name of the session
-  def initialize(_name)
-    @name = []
-    @sport = []
-    @info = []
-    @average_heart_rate = []
-    @total_duration = []
+  def initialize(name)
+    @name = name
+    @sport = ''
+    @info = ''
+    @average_heart_rate = 0
+    @total_duration = 0
   end
 
   ##
-  # Building a new Sport object.
+  # Adding a sport type to the object.
   # Params:
   # +type+:: the type of the sport
   def sport(type)
-    @sport << Sport.new(type)
+    @sport = type
   end
 
   ##
-  # Building a new Info object.
+  # Adding a message to the object.
   # Params:
   # +message+:: the info message
   def info(message)
-    @info << Info.new(message)
+    @info = message
   end
 
   ##
-  # Building a new AverageHeartRate object.
+  # Adding an average heart rate to the object.
   # Params:
   # +heart_rate+:: the average heart rate in bpm
   def average_heart_rate(heart_rate)
-    @average_heart_rate << AverageHeartRate.new(heart_rate)
+    @average_heart_rate = heart_rate.to_s.to_i
   end
 
   ##
-  # Building a new TotalDuration object.
+  # Adding a total duration to the object.
   # Params:
-  # +duration+:: the duration in seconds
+  # +duration+:: the duration in minutes
   def total_duration(duration)
-    @total_duration << TotalDuration.new(duration)
+    @total_duration = duration.to_s.to_i
   end
 
   ##
   # Converting a session to a string.
   def to_s
-    "#{@sport[0].type} #{@info[0].message}"
+    "#{@sport} #{@info}"
   end
 
   ##
   # Converting a session to a JSON-ized string.
   def to_hash
-    {
-      name: @name.collect(&:to_hash),
-      sport:	@sport.collect(&:to_hash),
-      info:	@info.collect(&:to_hash),
-      average_heart_rate: @average_heart_rate.collect(&:to_hash),
-      total_duration: @total_duration.collect(&:to_hash),
+    hash = {
+      name: @name,
+      sport:	@sport,
+      average_heart_rate: @average_heart_rate,
+      total_duration: @total_duration,
     }
+
+    hash[:info] = @info if @info != ''
+    hash
   end
 end

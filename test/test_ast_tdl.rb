@@ -9,29 +9,30 @@ class AstTdlTest < Minitest::Test
   ##
   # Example training getter.
   def self.training
-    Ast.build :Monday do
-      session('Short swimming session today') {
-        sport               :"swim"
+    Ast.build('My first training') do
+      session('Short swimming session') do
+        sport               :swim
         info                :"Very easy training"
         average_heart_rate  :"130"
         total_duration      :"30"
-      }
+      end
     
-      session('Bike ride') {
-        sport               :"bike"
+      session('Bike ride') do
+        sport               :cycling
         info                :"Endurance ride with intervals"
         average_heart_rate  :"140"
-        total_duration      :"250"
-      }
+        total_duration      :"120"
+      end
     
-      interval('Number 1') {
-        sport                   :"swim"
-        info                    :"Moderate"
-        average_heart_rate      :"160"
-        total_duration          :"5"
-        average_heart_rate_rest :"90"
-        total_duration_rest     :"2"
-      }
+      interval('Sample interval') do
+        sport                   :cycling
+        info                    :Moderate
+        speed_duration          :"5"
+        recovery_duration       :"5"
+        speed_heart_rate        :"180"
+        recovery_heart_rate     :"90"
+        repetitions             :"10"
+      end
     end
   end
 
@@ -46,20 +47,20 @@ class AstTdlTest < Minitest::Test
   # Name test.
   def test_name
     training = JSON.parse(AstTdlTest.training.json)
-    assert_equal training['name'], 'Monday'
+    assert_equal training['name'], 'My first training'
   end
 
   ##
   # First session sport type test.
   def test_first_session_sport_type
     training = JSON.parse(AstTdlTest.training.json)
-    assert_equal training['session'][0]['sport'][0]['type'], 'swim'
+    assert_equal training['session'][0]['sport'], 'swim'
   end
 
   ##
   # First session info message test.
   def test_first_session_info_message
     training = JSON.parse(AstTdlTest.training.json)
-    assert_equal training['session'][0]['info'][0]['message'], 'Very easy training'
+    assert_equal training['session'][0]['info'], 'Very easy training'
   end
 end
