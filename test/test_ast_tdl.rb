@@ -40,7 +40,7 @@ class AstTdlTest < Minitest::Test
   # Version test.
   def test_version
     spec = Gem::Specification.load('ast-tdl.gemspec')
-    assert_equal spec.version, '0.0.4'
+    assert_equal spec.version, '0.1.0'
   end
 
   ##
