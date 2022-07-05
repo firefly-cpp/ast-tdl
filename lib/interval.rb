@@ -7,81 +7,94 @@ class Interval
   # Initialization method for the +Interval+ class.
   # Params:
   # +name+:: the name of the interval
-  def initialize(_name)
-    @name = []
-    @sport = []
-    @info = []
-    @average_heart_rate = []
-    @total_duration = []
-    @average_heart_rate_rest = []
-    @total_duration_rest = []
+  def initialize(name)
+    @name = name
+    @sport = ''
+    @info = ''
+    @speed_duration = 0
+    @recovery_duration = 0
+    @speed_heart_rate = 0
+    @recovery_heart_rate = 0
+    @repetitions = 0
   end
 
   ##
-  # Building a new Sport object.
+  # Adding a sport to the object.
   # Params:
   # +type+:: the type of the sport
   def sport(type)
-    @sport << Sport.new(type)
+    @sport = type
   end
 
   ##
-  # Building a new Info object.
+  # Adding an info message to the object.
   # Params:
   # +message+:: the info message
   def info(message)
-    @info << Info.new(message)
+    @info = message
   end
 
   ##
-  # Building a new AverageHeartRate object.
+  # Adding a speed duration of an interval to the object.
   # Params:
-  # +heart_rate+:: the average heart rate in bpm
-  def average_heart_rate(heart_rate)
-    @average_heart_rate << AverageHeartRate.new(heart_rate)
+  # +speed_duration+:: the duration of the speed segment in minutes
+  def speed_duration(speed_duration)
+    @speed_duration = speed_duration.to_s.to_i
   end
 
   ##
-  # Building a new TotalDuration object.
+  # Adding a recovery duration of an interval to the object.
   # Params:
-  # +duration+:: the duration in seconds
-  def total_duration(duration)
-    @total_duration << TotalDuration.new(duration)
+  # +recovery_duration+:: the duration of the recovery segment in minutes
+  def recovery_duration(recovery_duration)
+    @recovery_duration = recovery_duration.to_s.to_i
   end
 
   ##
-  # Building a new AverageHeartRateRest object.
+  # Adding a speed heart rate of an interval to the object.
   # Params:
-  # +heart_rate_rest+:: the average rest heart rate in bpm
-  def average_heart_rate_rest(heart_rate_rest)
-    @average_heart_rate_rest << AverageHeartRateRest.new(heart_rate_rest)
+  # +speed_heart_rate+:: the average speed heart rate in bpm
+  def speed_heart_rate(speed_heart_rate)
+    @speed_heart_rate = speed_heart_rate.to_s.to_i
   end
 
   ##
-  # Building a new TotalDurationRest object.
+  # Adding a recovery heart rate of an interval to the object.
   # Params:
-  # +duration rest+:: the rest duration in seconds
-  def total_duration_rest(duration_rest)
-    @total_duration_rest << TotalDurationRest.new(duration_rest)
+  # +recovery_heart_rate+:: the average speed heart rate in bpm
+  def recovery_heart_rate(recovery_heart_rate)
+    @recovery_heart_rate = recovery_heart_rate.to_s.to_i
+  end
+
+  ##
+  # Adding a number of repetitions to the object.
+  # Params:
+  # +repetitions+:: number of interval repetitions
+  def repetitions(repetitions)
+    @repetitions = repetitions.to_s.to_i
   end
 
   ##
   # Converting an interval to a string.
   def to_s
-    "#{@sport[0].type} #{@info[0].message}"
+    "#{@sport} #{@info}"
   end
 
   ##
   # Converting an interval to a JSON-ized string.
   def to_hash
-    {
-      name: @name.collect(&:to_hash),
-      sport: @sport.collect(&:to_hash),
-      info: @info.collect(&:to_hash),
-      average_heart_rate: @average_heart_rate.collect(&:to_hash),
-      total_duration: @total_duration.collect(&:to_hash),
-      average_heart_rate_rest: @average_heart_rate_rest.collect(&:to_hash),
-      total_duration_rest: @total_duration_rest.collect(&:to_hash),
+    hash = {
+      name: @name,
+      sport: @sport,
+      info: @info,
+      speed_duration: @speed_duration,
+      recovery_duration: @recovery_duration,
+      speed_heart_rate: @speed_heart_rate,
+      recovery_heart_rate: @recovery_heart_rate,
+      repetitions: @repetitions
     }
+
+    hash[:info] = @info if @info
+    hash
   end
 end
