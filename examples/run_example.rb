@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require 'ast-tdl'
+# require 'ast-tdl'
+require_relative '../lib/ast-tdl'
 
 # Training description in AST-TDL domain specific language.
 training = Ast.build('My first training') do
@@ -26,6 +27,7 @@ training = Ast.build('My first training') do
     speed_heart_rate        :"180"
     recovery_heart_rate     :"90"
     repetitions             :"10"
+    type                    :fixed
   end
 end
 

@@ -16,6 +16,7 @@ class Interval
     @speed_heart_rate = 0
     @recovery_heart_rate = 0
     @repetitions = 0
+    @type = ''
   end
 
   ##
@@ -75,6 +76,14 @@ class Interval
   end
 
   ##
+  # Adding an interval type to the object.
+  # Params:
+  # +type+:: interval type
+  def type(type)
+    @type = type
+  end
+
+  ##
   # Converting an interval to a string.
   def to_s
     "#{@sport} #{@info}"
@@ -91,7 +100,8 @@ class Interval
       recovery_duration: @recovery_duration,
       speed_heart_rate: @speed_heart_rate,
       recovery_heart_rate: @recovery_heart_rate,
-      repetitions: @repetitions
+      repetitions: @repetitions,
+      type: @type
     }
 
     hash[:info] = @info if @info

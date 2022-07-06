@@ -4,7 +4,7 @@
 ast-dsl is intended to be a small DSL for practical definition and description of sports training that can be automatically or manually defined and used in conjunction with Artificial Sport Trainer.
 
 ## Feature diagram
-![scheme](https://user-images.githubusercontent.com/73126820/177355094-0b115a33-896d-41b3-bc8b-f27b6632c2b1.png)
+![scheme](https://user-images.githubusercontent.com/73126820/177511757-afb21ada-8b3e-412c-a24f-2cec7d837b1a.png)
 
 ## Installation
     $ gem install ast-tdl
