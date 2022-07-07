@@ -37,13 +37,6 @@ class AstTdlTest < Minitest::Test
   end
 
   ##
-  # Version test.
-  def test_version
-    spec = Gem::Specification.load('ast-tdl.gemspec')
-    assert_equal spec.version, '0.1.1'
-  end
-
-  ##
   # Name test.
   def test_name
     training = JSON.parse(AstTdlTest.training.json)
