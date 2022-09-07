@@ -2,7 +2,7 @@
 
 ---
 
-[![DOI](https://img.shields.io/badge/DOI-10.1109/INES52918.2021.9512927-blue)](https://doi.org/10.1109/INES52918.2021.9512927)
+[![DOI](https://img.shields.io/badge/DOI-10.1109/ISCMI53840.2021.9654817-blue)](https://doi.org/10.1109/ISCMI53840.2021.9654817)
 
 ## Motivation
 ast-dsl is intended to be a small DSL for practical definition and description of sports training that can be automatically or manually defined and used in conjunction with Artificial Sport Trainer.
