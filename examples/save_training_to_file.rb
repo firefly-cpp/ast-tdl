@@ -4,14 +4,14 @@ require 'ast-tdl'
 
 # Training description in AST-TDL domain specific language.
 training = Ast.build('My first training') do
-  session('Short swimming session') do
+  speed('Short swimming session') do
     sport               :swim
     info                :"Very easy training"
-    average_heart_rate  :"130"
+    average_heart_rate  :"130s"
     total_duration      :"30"
   end
 
-  session('Bike ride') do
+  speed('Bike ride') do
     sport               :cycling
     info                :"Endurance ride with intervals"
     average_heart_rate  :"140"

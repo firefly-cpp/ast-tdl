@@ -2,7 +2,8 @@
 
 require 'json'
 require_relative 'interval'
-require_relative 'session'
+require_relative 'speed'
+require_relative 'sport'
 
 ##
 # This module is intended to be used for building trainings
@@ -11,10 +12,9 @@ module Ast
   ##
   # Building a new training from the domain specific language.
   # Params:
-  # +name+:: the name of the training
   # +block+:: training data
-  def self.build(name, &block)
-    training = Training.new(name)
+  def self.build(&block)
+    training = Training.new()
     training.instance_eval(&block)
     training
   end
@@ -26,21 +26,20 @@ module Ast
     # Initialization method for the +Training+ class.
     # Params:
     # +name+:: the name of the training
-    def initialize(name)
-      @name = name
-      @session = []
+    def initialize()
+      @speed = []
       @interval = []
     end
 
     ##
-    # Building a new session from the domain specific language.
+    # Building a new speed session from the domain specific language.
     # Params:
-    # +name+:: the name of the session
-    # +block+:: session data
-    def session(name, &block)
-      training_type = Session.new(name)
+    # +name+:: the name of the speed session
+    # +block+:: speed session data
+    def speed(name, &block)
+      training_type = Speed.new(name)
       training_type.instance_eval(&block)
-      @session << training_type
+      @speed << training_type
     end
 
     ##
@@ -57,7 +56,7 @@ module Ast
     ##
     # Converting a training to a string.
     def to_s
-      "#{@name} #{@session[0]}"
+      "#{@name} #{@speed[0]}"
     end
 
     ##
@@ -65,7 +64,7 @@ module Ast
     def json
       training_json = {
         name: @name,
-        session: @session.collect(&:to_hash),
+        speed: @speed.collect(&:to_hash),
         interval: @interval.collect(&:to_hash)
       }
       JSON.pretty_generate(training_json)
