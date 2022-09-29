@@ -8,7 +8,7 @@
 ast-dsl is intended to be a small DSL for practical definition and description of sports training that can be automatically or manually defined and used in conjunction with Artificial Sport Trainer.
 
 ## Feature diagram
-![scheme](https://raw.githubusercontent.com/firefly-cpp/ast-tdl/main/.github/img/ast-tdl-feature.png)
+![ast-tdl](https://user-images.githubusercontent.com/73126820/193033601-6c94b328-30a4-4b25-86a3-0fb81cebca3d.png)
 
 ## Installation
     $ gem install ast-tdl
@@ -18,53 +18,82 @@ Training Description Language (TDL) is implemented in Ruby. Currently, the descr
 
 ## Examples
 ```ruby
-Ast.build('My first training') do
-  session('Short swimming session') do
-    sport               :swim
-    info                :"Very easy training"
-    average_heart_rate  :"130"
-    total_duration      :"30"
+Ast.build do
+  speed('Swimming with the dolphins') do
+    sport                   Sport::SWIMMING
+    info                    :"Very easy training"
+    average_heart_rate      :"130"
+    total_duration          :"30"
   end
 
-  session('Bike ride') do
-    sport               :cycling
-    info                :"Endurance ride with intervals"
-    average_heart_rate  :"140"
-    total_duration      :"120"
+  speed('Cross the country') do
+    sport                   Sport::CYCLING
+    info                    :"Endurance ride"
+    average_heart_rate      :"140"
+    total_duration          :"120"
   end
 
-  interval('Sample interval') do
-    sport                   :cycling
-    info                    :Moderate
-    speed_duration          :"5"
-    recovery_duration       :"5"
+  interval('Following Emil Zatopek') do
+    sport                   Sport::RUNNING
+    info                    :Hard
+    speed_duration          :"1"
+    recovery_duration       :"1"
     speed_heart_rate        :"180"
     recovery_heart_rate     :"90"
     repetitions             :"10"
+    type                    :fixed
+  end
+
+  power('As strong as an ox') do
+    sport                   Sport::WEIGHT_LIFTING
+    series('Little ox') do
+      intensity             :"5"
+      repetitions           :"20"
+    end
+    series('Big ox') do
+      intensity             :"10"
+      repetitions           :"80"
+    end
   end
 end
 ```
 
-### Session
+### Speed session
 ```ruby
-session('Bike ride') do
-  sport               :cycling
-  info                :"Endurance ride with intervals"
-  average_heart_rate  :"140"
-  total_duration      :"120"
+speed('Cross the country') do
+  sport                   Sport::CYCLING
+  info                    :"Endurance ride"
+  average_heart_rate      :"140"
+  total_duration          :"120"
 end
 ```
 
-### Interval
+### Interval session
 ```ruby
-interval('Sample interval') do
-  sport                :cycling
-  info                 :Moderate
-  speed_duration       :"5"
-  recovery_duration    :"5"
-  speed_heart_rate     :"180"
-  recovery_heart_rate  :"90"
-  repetitions          :"10"
+interval('Following Emil Zatopek') do
+  sport                   Sport::RUNNING
+  info                    :Hard
+  speed_duration          :"1"
+  recovery_duration       :"1"
+  speed_heart_rate        :"180"
+  recovery_heart_rate     :"90"
+  repetitions             :"10"
+  type                    :fixed
+end
+```
+
+### Power session
+```ruby
+power('As strong as an ox') do
+  sport                   Sport::WEIGHT_LIFTING
+  series('Little ox') do
+    intensity             :"5"
+    repetitions           :"20"
+  end
+  series('Big ox') do
+    intensity             :"10"
+    repetitions           :"80"
+  end
 end
 ```
 
