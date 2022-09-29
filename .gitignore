@@ -57,3 +57,4 @@ build-iPhoneSimulator/
 
 
 /feature_diagram
+*.gemspec
