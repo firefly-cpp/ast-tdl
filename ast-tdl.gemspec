@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'ast-tdl'
-  spec.version       = '0.1.1'
+  spec.version       = '0.2.0'
   spec.license       = 'MIT'
   spec.authors       = %w[firefly-cpp luckyLukac]
   spec.email         = ['iztok@iztok-jr-fister.eu', 'luka.lukac@student.um.si']
@@ -20,9 +20,12 @@ Gem::Specification.new do |spec|
   spec.files = [
     'LICENSE',
     'README.md',
+    'lib/sport.rb',
     'lib/ast.rb',
+    'lib/speed.rb',
     'lib/interval.rb',
-    'lib/session.rb',
+    'lib/power.rb',
+    'lib/series.rb',
     'lib/ast-tdl.rb'
   ]
 end

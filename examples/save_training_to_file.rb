@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../lib/ast-tdl'
+require 'ast-tdl'
 
 # Training description in AST-TDL domain specific language.
 training = Ast.build do
