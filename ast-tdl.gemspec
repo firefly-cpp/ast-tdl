@@ -20,9 +20,12 @@ Gem::Specification.new do |spec|
   spec.files = [
     'LICENSE',
     'README.md',
+    'lib/sport.rb',
     'lib/ast.rb',
+    'lib/speed.rb',
     'lib/interval.rb',
-    'lib/session.rb',
+    'lib/power.rb',
+    'lib/series.rb',
     'lib/ast-tdl.rb'
   ]
 end
