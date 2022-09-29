@@ -2,6 +2,7 @@
 
 require 'json'
 require_relative 'interval'
+require_relative 'power'
 require_relative 'speed'
 require_relative 'sport'
 
@@ -26,9 +27,10 @@ module Ast
     # Initialization method for the +Training+ class.
     # Params:
     # +name+:: the name of the training
-    def initialize()
+    def initialize
       @speed = []
       @interval = []
+      @power = []
     end
 
     ##
@@ -54,18 +56,36 @@ module Ast
     end
 
     ##
+    # Building a new power session from the domain specific language.
+    # Params:
+    # +name+:: the name of the power session
+    # +block+:: power session data
+    def power(name, &block)
+      power_data = Power.new(name)
+      power_data.instance_eval(&block)
+      @power << power_data
+    end
+
+    ##
     # Converting a training to a string.
     def to_s
-      "#{@name} #{@speed[0]}"
+      speed_number = @speed.length
+      interval_number = @interval.length
+      power_number = @power.length
+
+      "TRAINING DATA:\n"\
+      "Speed sessions: #{speed_number}\n"\
+      "Interval sessions: #{interval_number}\n"\
+      "Power sessions: #{power_number}\n\n"
     end
 
     ##
     # Converting a training to a JSON-ized string.
     def json
       training_json = {
-        name: @name,
         speed: @speed.collect(&:to_hash),
-        interval: @interval.collect(&:to_hash)
+        interval: @interval.collect(&:to_hash),
+        power: @power.collect(&:to_hash)
       }
       JSON.pretty_generate(training_json)
     end
@@ -75,7 +95,7 @@ module Ast
     # Params:
     # +filename+:: the desired name of the file
     def save_to_file(filename)
-      f = File.open(filename, 'w')
+      f = File.open("../trainings/#{filename}", 'w')
       f.puts(json)
       f.close
     end

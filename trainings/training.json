@@ -1,0 +1,49 @@
+{
+  "speed": [
+    {
+      "name": "Swimming with the dolphins",
+      "sport": "swimming",
+      "average_heart_rate": 130,
+      "total_duration": 30,
+      "info": "Very easy training"
+    },
+    {
+      "name": "Cross the country",
+      "sport": "cycling",
+      "average_heart_rate": 140,
+      "total_duration": 120,
+      "info": "Endurance ride"
+    }
+  ],
+  "interval": [
+    {
+      "name": "Following Emil Zatopek",
+      "sport": "running",
+      "info": "Hard",
+      "speed_duration": 1,
+      "recovery_duration": 1,
+      "speed_heart_rate": 180,
+      "recovery_heart_rate": 90,
+      "repetitions": 10,
+      "type": "fixed"
+    }
+  ],
+  "power": [
+    {
+      "name": "As strong as an ox",
+      "sport": "weight lifting",
+      "series": [
+        {
+          "name": "Little ox",
+          "intensity": 5,
+          "repetitions": 20
+        },
+        {
+          "name": "Big ox",
+          "intensity": 10,
+          "repetitions": 80
+        }
+      ]
+    }
+  ]
+}

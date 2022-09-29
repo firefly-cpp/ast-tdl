@@ -2,7 +2,6 @@
 
 require_relative 'sport'
 
-
 ##
 # This class represents an interval.
 class Interval

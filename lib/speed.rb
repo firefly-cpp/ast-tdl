@@ -58,7 +58,7 @@ class Speed
     raise 'The given average heart rate is not an integer.' if duration_str != duration_str.to_i.to_s
     raise 'The duration has to be 1 minute at least.' if duration_int < 1
 
-    @duration = duration_int
+    @total_duration = duration_int
   end
 
   ##
@@ -74,7 +74,7 @@ class Speed
       name: @name,
       sport:	@sport,
       average_heart_rate: @average_heart_rate,
-      total_duration: @total_duration,
+      total_duration: @total_duration
     }
 
     hash[:info] = @info if @info != ''
