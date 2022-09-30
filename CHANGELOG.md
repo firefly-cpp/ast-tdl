@@ -2,10 +2,20 @@
 
 ## [Unreleased](https://github.com/firefly-cpp/ast-tdl/tree/HEAD)
 
-[Full Changelog](https://github.com/firefly-cpp/ast-tdl/compare/0.1.1...HEAD)
+[Full Changelog](https://github.com/firefly-cpp/ast-tdl/compare/0.2.0...HEAD)
 
 **Merged pull requests:**
 
+- Version 0.2.0 [\#22](https://github.com/firefly-cpp/ast-tdl/pull/22) ([luckyLukac](https://github.com/luckyLukac))
+
+## [0.2.0](https://github.com/firefly-cpp/ast-tdl/tree/0.2.0) (2022-09-29)
+
+[Full Changelog](https://github.com/firefly-cpp/ast-tdl/compare/0.1.1...0.2.0)
+
+**Merged pull requests:**
+
+- Fix CI workflow attempt [\#21](https://github.com/firefly-cpp/ast-tdl/pull/21) ([firefly-cpp](https://github.com/firefly-cpp))
+- Support for power trainings and various improvements [\#20](https://github.com/firefly-cpp/ast-tdl/pull/20) ([luckyLukac](https://github.com/luckyLukac))
 - Change test commands [\#18](https://github.com/firefly-cpp/ast-tdl/pull/18) ([firefly-cpp](https://github.com/firefly-cpp))
 
 ## [0.1.1](https://github.com/firefly-cpp/ast-tdl/tree/0.1.1) (2022-07-07)
