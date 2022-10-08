@@ -1,11 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/firefly-cpp/ast-tdl/tree/HEAD)
+## [0.2.1](https://github.com/firefly-cpp/ast-tdl/tree/0.2.1) (2022-10-03)
 
-[Full Changelog](https://github.com/firefly-cpp/ast-tdl/compare/0.2.0...HEAD)
+[Full Changelog](https://github.com/firefly-cpp/ast-tdl/compare/0.2.0...0.2.1)
 
 **Merged pull requests:**
 
+- Version 0.2.1 [\#23](https://github.com/firefly-cpp/ast-tdl/pull/23) ([luckyLukac](https://github.com/luckyLukac))
 - Version 0.2.0 [\#22](https://github.com/firefly-cpp/ast-tdl/pull/22) ([luckyLukac](https://github.com/luckyLukac))
 
 ## [0.2.0](https://github.com/firefly-cpp/ast-tdl/tree/0.2.0) (2022-09-29)
