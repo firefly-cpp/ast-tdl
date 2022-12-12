@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.2](https://github.com/firefly-cpp/ast-tdl/tree/0.2.2) (2022-12-05)
+
+[Full Changelog](https://github.com/firefly-cpp/ast-tdl/compare/0.2.1...0.2.2)
+
+**Merged pull requests:**
+
+- Version 0.2.2 [\#24](https://github.com/firefly-cpp/ast-tdl/pull/24) ([luckyLukac](https://github.com/luckyLukac))
+
 ## [0.2.1](https://github.com/firefly-cpp/ast-tdl/tree/0.2.1) (2022-10-03)
 
 [Full Changelog](https://github.com/firefly-cpp/ast-tdl/compare/0.2.0...0.2.1)
