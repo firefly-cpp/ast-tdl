@@ -2,6 +2,8 @@
 
 ---
 
+[![AUR package](https://img.shields.io/aur/version/ruby-ast-tdl?color=blue&label=Arch%20Linux&logo=arch-linux)](https://aur.archlinux.org/packages/ruby-ast-tdl)
+
 [![DOI](https://img.shields.io/badge/DOI-10.3390/app122412741-blue)](https://doi.org/10.3390/app122412741)
 
 ## Motivation
@@ -22,8 +24,16 @@ Power trainings have been proven to be an effective method for increasing muscle
 ![ast-tdl](https://user-images.githubusercontent.com/73126820/193033601-6c94b328-30a4-4b25-86a3-0fb81cebca3d.png)
 
 ## Installation
+Install ast-dsl with gem:
+
 ```sh
 $ gem install ast-tdl
+```
+
+To install ast-dsl on Arch Linux, please use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers):
+
+```sh
+$ yay -Syyu ruby-ast-tdl
 ```
 
 ## Language description
