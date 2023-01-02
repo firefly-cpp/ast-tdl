@@ -2,6 +2,7 @@
 
 ---
 
+[![Gem package](https://img.shields.io/gem/v/ast-tdl?color=blue)](https://img.shields.io/gem/v/ast-tdl?color=blue)
 [![AUR package](https://img.shields.io/aur/version/ruby-ast-tdl?color=blue&label=Arch%20Linux&logo=arch-linux)](https://aur.archlinux.org/packages/ruby-ast-tdl)
 
 [![DOI](https://img.shields.io/badge/DOI-10.3390/app122412741-blue)](https://doi.org/10.3390/app122412741)
