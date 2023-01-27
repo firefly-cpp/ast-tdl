@@ -101,4 +101,4 @@ Lukač, L., Fister Jr., I., Fister, I. "[Digital Twin in Sport: From an Idea to 
 
 Fister Jr, I., Fister, I., Iglesias, A., Galvez, A., Deb, S., & Fister, D. (2021). On deploying the Artificial Sport Trainer into practice. arXiv preprint [arXiv:2109.13334](https://arxiv.org/abs/2109.13334).
 
-Lukač, L. (2022). Aplikacija koncepta digitalnega dvojčka v športu [online]. University of Maribor, Faculty of Electrical Engineering and Computer Science. [Access: 29th September, 2022].
+Lukač, L. (2022). [Aplikacija koncepta digitalnega dvojčka v športu](https://dk.um.si/IzpisGradiva.php?id=82612). University of Maribor, Faculty of Electrical Engineering and Computer Science. [Access: 29th September, 2022].
