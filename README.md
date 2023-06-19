@@ -30,6 +30,11 @@ Install ast-dsl with gem:
 ```sh
 $ gem install ast-tdl
 ```
+To install ast-tdl on Alpine, use:
+
+```sh
+$ apk add ruby-ast-tdl
+```
 
 To install ast-dsl on Arch Linux, please use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers):
 
