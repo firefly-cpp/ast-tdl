@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'ast-tdl'
-  spec.version       = '0.2.2'
+  spec.version       = '0.2.3'
   spec.license       = 'MIT'
   spec.authors       = %w[firefly-cpp luckyLukac]
   spec.email         = ['iztok@iztok-jr-fister.eu', 'luka.lukac@student.um.si']
